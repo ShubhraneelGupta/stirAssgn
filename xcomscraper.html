@@ -1,0 +1,64 @@
+<!DOCTYPE html><html style="margin: 5rem 30vw;"><head><meta charset="utf-8"><title>SHUBHRANEEL GUPTA.md</title><style></style></head><body id="preview">
+<h2 class="code-line" data-line-start=0 data-line-end=1 ><a id="XCOM_SCRAPING_ASSIGNMENT_httpsreactshenanigansninevercelapp_0"></a><a href="http://X.COM">X.COM</a> SCRAPING ASSIGNMENT (<a href="https://react-shenanigans-nine.vercel.app/">https://react-shenanigans-nine.vercel.app/</a>)</h2>
+<ul>
+<li class="has-line-data" data-line-start="1" data-line-end="5">
+<h3 class="code-line" data-line-start=1 data-line-end=2 ><a id="The_frontend__httpsreactshenanigansninevercelapp_1"></a>The front-end - <a href="https://react-shenanigans-nine.vercel.app/">https://react-shenanigans-nine.vercel.app/</a></h3>
+<ul>
+<li class="has-line-data" data-line-start="2" data-line-end="3">github link - <a href="https://github.com/ShubhraneelGupta/ReactShenanigans/blob/main/src/App.jsx">https://github.com/ShubhraneelGupta/ReactShenanigans/blob/main/src/App.jsx</a></li>
+<li class="has-line-data" data-line-start="3" data-line-end="5">Written in react and built using vite, you need to click on fetch and will have to wait for about <strong>20-25 secs</strong></li>
+</ul>
+</li>
+<li class="has-line-data" data-line-start="5" data-line-end="23">
+<h3 class="code-line" data-line-start=5 data-line-end=6 ><a id="The_backend__httpspatientfireflyfunngrokfreeapp_5"></a>The back-end - <a href="https://patient-firefly-fun.ngrok-free.app/">https://patient-firefly-fun.ngrok-free.app/</a></h3>
+<ul>
+<li class="has-line-data" data-line-start="6" data-line-end="7">github link - <a href="https://github.com/ShubhraneelGupta/xComScraper">https://github.com/ShubhraneelGupta/xComScraper</a></li>
+<li class="has-line-data" data-line-start="7" data-line-end="8">This runs a headless instance of chromium with selenium within a docker container</li>
+<li class="has-line-data" data-line-start="8" data-line-end="9">
+<h3 class="code-line" data-line-start=8 data-line-end=9 ><a id="Caveats_8"></a>Caveats</h3>
+</li>
+<li class="has-line-data" data-line-start="9" data-line-end="10"><em>It’s hosted locally</em> - yeah I tried <em><a href="http://railway.com">railway.com</a></em> and <em><a href="https://render.com">render.com</a></em> but their free tiers are so slow that I had to do cumulative explicit waits of over a minute so I decided to use <strong>NGROK</strong> and forward my port which runs the docker container so it can be accessed from the web. But I do need to keep my laptop connected to the internet all the time.</li>
+<li class="has-line-data" data-line-start="10" data-line-end="11">
+<h3 class="code-line" data-line-start=10 data-line-end=11 ><a id="API_10"></a>API</h3>
+</li>
+<li class="has-line-data" data-line-start="11" data-line-end="13"><em>/api/my-ip</em> <strong>—GET</strong>
+<ul>
+<li class="has-line-data" data-line-start="12" data-line-end="13">Returns the ip that was used to make the request to <a href="http://x.com">x.com</a></li>
+</ul>
+</li>
+<li class="has-line-data" data-line-start="13" data-line-end="15"><em>/api/save</em>  <strong>—POST</strong>
+<ul>
+<li class="has-line-data" data-line-start="14" data-line-end="15">Saves the data that has been scraped into a mongoDB cluster</li>
+</ul>
+</li>
+<li class="has-line-data" data-line-start="15" data-line-end="17"><em>/api/scrape</em> <strong>—GET</strong>
+<ul>
+<li class="has-line-data" data-line-start="16" data-line-end="17">Heart of the API, navigates Login and through other elements to reach to the <strong>top 5</strong> trending topics on <a href="http://x.com">x.com</a></li>
+</ul>
+</li>
+<li class="has-line-data" data-line-start="17" data-line-end="18">
+<h3 class="code-line" data-line-start=17 data-line-end=18 ><a id="Stack_17"></a>Stack</h3>
+</li>
+<li class="has-line-data" data-line-start="18" data-line-end="19"><em>Flask</em> - for the server side logic and routing</li>
+<li class="has-line-data" data-line-start="19" data-line-end="20"><em>Docker</em> - for containerizing</li>
+<li class="has-line-data" data-line-start="20" data-line-end="21"><em>Selenium</em> - for Scraping</li>
+<li class="has-line-data" data-line-start="21" data-line-end="22"><em>MongoDB</em> - for saving the fetched data</li>
+<li class="has-line-data" data-line-start="22" data-line-end="23"><em>Proxymesh</em> - for IP rotation (commented out)</li>
+</ul>
+</li>
+<li class="has-line-data" data-line-start="23" data-line-end="26">
+<h3 class="code-line" data-line-start=23 data-line-end=24 ><a id="Might_fail__23"></a>Might fail -</h3>
+<ul>
+<li class="has-line-data" data-line-start="24" data-line-end="26">Sometimes because of logging in too many times, they ask different things thus changing the layout and I have not figured out how to deal with it without taking even more processing time but if that happens <strong>pls contact me</strong> - I will change the account name and password and it will give me the good ol’ format that my script is written for .</li>
+</ul>
+</li>
+<li class="has-line-data" data-line-start="26" data-line-end="30">
+<h3 class="code-line" data-line-start=26 data-line-end=27 ><a id="What_I_failed_to_implement__26"></a>What I failed to implement -</h3>
+<ul>
+<li class="has-line-data" data-line-start="27" data-line-end="28"><strong>Proxymesh</strong> - Given I can only use one proxy from their list and they rotate quite slowly I kept on getting banned, so I commented it out, Still figuring out a way to use it.</li>
+<li class="has-line-data" data-line-start="28" data-line-end="30">Can be curbed by taking free proxies and writing a program to check their validity and using them randomly.</li>
+</ul>
+</li>
+</ul>
+<p class="has-line-data" data-line-start="30" data-line-end="31"><em>PS:- More than anything I enjoyed it a lot, thank you for giving me this learning opportunity</em></p>
+
+</body></html>
